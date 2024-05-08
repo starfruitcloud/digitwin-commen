@@ -4,5 +4,5 @@
 
 import * as Cesium from '@cesium/engine'
 import Supercluster from 'supercluster'
-const ENGINE_VERSION = '8.0.0'
+const ENGINE_VERSION = '9.1.0'
 export { Cesium, Supercluster, ENGINE_VERSION }

@@ -15,7 +15,7 @@ const buildConfig = {
   legalComments: `inline`,
   logLimit: 0,
   target: `es2019`,
-  minify: false,
+  minify: true,
   sourcemap: false,
   write: true,
   logLevel: 'info',
@@ -29,7 +29,6 @@ async function buildNamespace(options) {
     entryPoints: ['src/index.js'],
     format: options.node ? 'esm' : 'iife',
     globalName: 'DC.__namespace',
-    minify: options.minify,
     outfile: path.join('dist', options.node ? 'index.js' : '__namespace.js'),
   })
 }
@@ -48,13 +47,13 @@ async function copyAssets() {
 }
 
 export const build = gulp.series(
-  () => buildNamespace({ node: true, minify: true }),
-  () => buildNamespace({ iife: true, minify: true }),
+  () => buildNamespace({ node: true }),
+  () => buildNamespace({ iife: true }),
   copyAssets
 )
 
 export const buildRelease = gulp.series(
-  () => buildNamespace({ node: true, minify: true }),
-  () => buildNamespace({ iife: true, minify: true }),
+  () => buildNamespace({ node: true }),
+  () => buildNamespace({ iife: true }),
   copyAssets
 )
