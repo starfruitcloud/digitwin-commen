@@ -1,5 +1,5 @@
 /**
- @author : Caven Chen
+ @author : ershing
  **/
 
 import * as Cesium from '@cesium/engine'

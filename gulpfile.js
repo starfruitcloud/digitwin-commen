@@ -1,5 +1,5 @@
 /**
- @author : Caven Chen
+ @author : ershing
  **/
 
 'use strict'
@@ -28,7 +28,7 @@ async function buildNamespace(options) {
     ...buildConfig,
     entryPoints: ['src/index.js'],
     format: options.node ? 'esm' : 'iife',
-    globalName: 'DC.__namespace',
+    globalName: 'DT.__namespace',
     outfile: path.join('dist', options.node ? 'index.js' : '__namespace.js'),
   })
 }
