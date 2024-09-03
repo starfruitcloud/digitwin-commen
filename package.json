@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf dist && gulp build",
     "build:release": "rimraf dist && gulp buildRelease",
-    "prepublishOnly": "yarn run build:release",
+    "prepublishOnly": "npm run build:release",
     "server": "gulp server",
     "lint": "eslint --fix src"
   },
