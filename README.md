@@ -1,1 +1,1 @@
-# @digitwin/dt-common
+# @starfruitcloud/digitwin-common

@@ -1,11 +1,15 @@
 {
-  "name": "@digitwin/dt-common",
+  "name": "@starfruitcloud/digitwin-common",
   "version": "1.0.0",
   "repository": "git@github.com:starfruitcloud/digitwin-common.git",
   "author": "",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "rimraf dist && gulp build",
     "build:release": "rimraf dist && gulp buildRelease",
